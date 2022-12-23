@@ -1,4 +1,4 @@
-# 3. Calculator
+# Calculator
 - 계산기 특성상 많은 기능을 GIF로 담아낼수 없어 다른 프로젝트와 달리 작동 화면 없음.
 - 각각 다른 해상도에도 일정한 화면을 보여주기 위해 각 sub view에 비율을 세팅해 구성한 프로젝트. 
 
@@ -14,7 +14,7 @@
 | ![](https://i.imgur.com/LVpbKo4.png)| ![](https://i.imgur.com/j86xls9.png)|
 - 먼저 Vertical Stack View의 Alignment와 Distribution을 보면 Fill과 Fill로 되어있다. 즉, Vertical Stack view내 sub view들의 가로로 쭈욱 늘리고, 세로로 겹겹이 쌓여있을때 sub view들을 vertical stack view의 높이만큼 꽉 채워주겠다는 의미이다.
 - 다음, Horizontal Stack View의 Alignment와 Distribution을 보면 Fill과 Equal Spacing이다. 즉, 아이템들을 세로로 쭈욱 늘리고 아이템이 가로로 겹겹이 쌓여있을때 sub view들을 horizontal stack view의 넓이만큼 늘려주겠다는 의미이다.
-![](https://i.imgur.com/pEUK7fB.png)
+![](https://i.imgur.com/QuIX7jf.png)
 - 또, **제일 중요한 부분**은 'AC'와 '0'을 제외한 모든 버튼의 Aspect Ratio는 1:1이다. 'AC'는 '9'의 trailing에, '0'은 '2'의 trailing에 맞춰주었다. (사진 참고)
 ![](https://i.imgur.com/gtSoaUW.png)
 - 이제 마지막으로 Vertical Stack View와 해당 vertical stack view의 superview인 UIView 사이에 제약조건 중 Bottom Priority를 1000(Require)에서 750(High)로 낮춰줘 각기 다른 화면 사이즈에서 동일한 비율로 UI를 보여줄 수 있다.
@@ -27,7 +27,7 @@
 - 이제 attributes inspector에서 선택해주면 끝!
 ![](https://i.imgur.com/GfXMSnt.png)
 - 모든 버튼의 속성을 'On'으로 했을때 결과
-![](https://i.imgur.com/3B9lnsg.png)
+![](https://i.imgur.com/iKtQ3Bw.png)
 - **발견한점**
 - @IBDesignable을 어트리뷰트를 사용하면 스토리보드에서 실시간으로 변하는것을 볼 수 있다고 배웠는데, 많이 기다리지 않아서 그런것인지, 아니면 다른 추가적인 작업이 또 필요한지 모르겠지만 아예 바뀌지 않았다.
 
